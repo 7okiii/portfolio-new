@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Anton&family=Lobster&family=Patua+One&family=Poppins:wght@400;600&family=Secular+One&family=Sen:wght@400;700&family=Ubuntu:wght@300&family=Zilla+Slab:wght@300;600&display=swap');
 
+// @font-face {
+//     font-family: poppins;
+//     src: url('../font/poppins-regular-webfont.woff');
+// }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Poppins;
+    font-family: poppins;
 }
 
 $mainBlack: #343434;
@@ -12,6 +17,93 @@ $pColor: #4d4d4d;
 
 html {
     scroll-behavior: smooth;
+}
+
+#arrowToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3rem;
+    padding: 10px;
+    background-color: #EB5D3B;
+    color: #5967EC;
+    border-radius: 50%;
+    color: white;
+    font-weight: 900;
+    opacity: 0.8;
+    z-index: 8;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+        background-color: #5967EC;
+    }
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        // transform: translateY(150px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInLeft {
+    opacity: 0;
+}
+
+.fadeInRight {
+    opacity: 0;
+}
+
+.fadeInBottom {
+    opacity: 0;
+}
+
+.fadeInOrange1 {
+    opacity: 0;
+}
+
+.fadeInOrange2 {
+    opacity: 0;
+}
+
+
+.fadeInFromLeft {
+    animation: fadeInFromLeft 1s ease-in-out;
+    opacity: 1;
+}
+
+.fadeInFromRight {
+    animation: fadeInFromRight 1s ease-in-out;
+    opacity: 1;
+}
+
+.fadeInFromBottom {
+    animation: fadeInFromBottom 1s ease-in-out;
+    opacity: 1;
 }
 
 .container {
@@ -248,15 +340,32 @@ nav {
     align-items: center;
     justify-content: space-between;
     .aboutMe-left {
+        // animation: fadeInFromLeft 1s ease-in-out;
         p {
             color: $pColor;
+            margin-bottom: 35px;
+        }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #FFE4DE;
+            text-align: center;
+            border-radius: 50px;
+            padding: 7px 30px;
+            color: #EE2E00;
+            transition: all .3s;
+            &:hover {
+                background-color: #EE2E00;
+                color: #FFE4DE;
+            }
         }
     }
     .aboutMe-right {
+        // animation: fadeInFromRight 1s ease-in-out;
         img {
             width: 100%;
-            border-radius: 15px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 25px;
+            // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
     }
 }
@@ -264,6 +373,7 @@ nav {
 .skills-wrapper {
     background-color: #F6F6F6;
     .skills-container {
+        // animation: fadeInFromBottom 1s ease-in-out;
         .skill-cards {
             display: grid;
             gap: 30px;
@@ -315,7 +425,9 @@ nav {
         }
         .language {
             color: #ffffffcb;
+            font-weight: bold;
             margin-bottom: 10px;
+            font-style: italic;
         }
         .project-detail {
             color: #ffffffbd;
@@ -353,13 +465,14 @@ nav {
         }
 
         .project-card-orange {
+            // animation: fadeInFromRight 1s ease-in-out;
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
             column-gap: 70px;
             row-gap: 15px;
             padding: 40px;
             background-color: #EB5D3B;
-            border-radius: 15px;
+            border-radius: 25px;
             .orange-left {
                 display: flex;
                 flex-direction: column;
@@ -374,7 +487,7 @@ nav {
                 align-items: center;
                 img {
                     width: 100%;
-                    border-radius: 12px;
+                    border-radius: 15px;
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 }
             }
@@ -383,13 +496,14 @@ nav {
             }
         }
         .project-card-blue {
+            // animation: fadeInFromLeft 1s ease-in-out;
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
             column-gap: 70px;
             row-gap: 15px;
             padding: 40px;
             background-color: #5967EC;
-            border-radius: 15px;
+            border-radius: 25px;
             margin: 40px 0;
             .blue-left {
                 display: flex;
@@ -397,7 +511,7 @@ nav {
                 align-items: center;
                 img {
                     width: 100%;
-                    border-radius: 12px;
+                    border-radius: 15px;
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 }
             }
@@ -422,7 +536,7 @@ nav {
         grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
         img {
             width: 100%;
-            border-radius: 15px;
+            border-radius: 25px;
             transition: all .3s;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             &:hover {
@@ -440,6 +554,69 @@ nav {
         }
         p {
             color: $pColor;
+        }
+    }
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    .contact-left {
+        p {
+            margin-bottom: 10px;
+            color: $pColor;
+        }
+        .phone {
+            display: flex;
+            align-items: center;
+            img {
+                width: 30px;
+                margin-right: 15px;
+            }
+            a {
+                text-decoration: none;
+                color: $pColor;
+                font-weight: bold;
+                &:hover {
+                    color: #5967EC;
+                }
+            }
+        }
+        .email {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            img {
+                width: 30px;
+                margin-right: 15px;
+            }
+            a {
+                text-decoration: none;
+                color: $pColor;
+                font-weight: bold;
+                &:hover {
+                    color: #EB5D3B;
+                }
+            }
+        }    
+        a {
+            &:hover {
+                opacity: 0.8;
+            }
+            img {
+                width: 35px;
+            }
+        }
+        #gitHub {
+            margin: 0 10px;
+        }
+    }
+    .contact-right {
+        img {
+            width: 90%;
         }
     }
 }

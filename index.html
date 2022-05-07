@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/index.css">
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <script src="./js/jquery.js"></script>
-    <script src="./js/index.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
     <title>Naoki Ogata</title>
 </head>
 <body>
+    <i class="las la-chevron-up" id="arrowToTop"></i>
     <nav id="mainMenu">
         <img src="./img/nkLogo.png">
         <ul>
@@ -69,21 +71,26 @@
     </div>
     <div class="aboutMe-wrapper" id="aboutMe">
         <div class="container aboutMe-container">
-            <div class="aboutMe-left">
+            <div class="aboutMe-left fadeInLeft">
                 <h2 class="section-title">About Me<span class="orange-dot">.</span></h2>
                 <p>
-                    Hi, Thank you very much for visiting my page. My name is Naoki Ogata. I recently graduated from a Web Development Diploma program in Canada with a GPA of 97%, and I'm looking for a co-op opportunity.
+                    <!-- Hi, Thank you very much for visiting my page. My name is Naoki Ogata. I recently graduated from a Web Development Diploma program in Canada with a GPA of 97%, and I'm looking for a co-op opportunity.
                     <br><br>
-                    I love coding. I love to think about making something new with my logic. I'm passionate about learning web development.
+                    I love coding. I love to think about making something new with my logic. I'm passionate about learning web development. -->
+                    Hello and thank you very much for visiting my page. My name is Naoki Ogata. I recently graduated from a web development diploma program in Canada with a GPA of 97%, and am currently looking for a co-op opportunity.
+                    <br><br>
+                    I love coding. I love that it requires me to come up with creative solutions. I am excited to continue learning about web development and sharpening my skills.
                 </p>
+                <a target="_blank" href="https://drive.google.com/file/d/1wMZ58ukvnxtOOveTSDvEteqy96h4L28s/view?usp=sharing"><i class="las la-file-alt"></i>RESUME</a>        
+
             </div>
-            <div class="aboutMe-right">
-                <img src="./img/tamwood.jpg" alt="">
+            <div class="aboutMe-right fadeInRight">
+                <img src="./img/contact.svg" alt="">
             </div>
         </div>
     </div>
     <div class="skills-wrapper" id="skills">
-        <div class="container skills-container">
+        <div class="container skills-container fadeInBottom">
             <h2 class="section-title">Skills<span class="blue-dot">.</span></h2>
             <div class="skill-cards">
                 <div class="skill-card">
@@ -236,41 +243,53 @@
     </div>
     <div class="projects-wrapper" id="projects">
         <div class="container projects-container">
-            <h2 class="section-title">Projects<span class="orange-dot">.</span></h2>
-            <div class="project-card-orange">
+            <h2 class="section-title fadeInLeft">Projects<span class="orange-dot">.</span></h2>
+            <div class="project-card-orange fadeInOrange1">
                 <div class="orange-left">
                     <h3 class="project-title">Dynamic Dashboard</h3>
-                    <p class="language">HTML, Sass, Javascript, XXX, XXX, XXX</p>
+                    <p class="language">HTML, Sass, Bootstrap Javascript, jQuery, PHP, MySQL, GitHub</p>
                     <p class="project-detail">
-                        A dynamic dashboard for the educational institution. PHP to routine pages, Hash and salt technique for secured data storing.
+                        <!-- A dynamic dashboard for the educational institution. PHP to routine pages, Hash and salt technique for secured data storing. -->
+
+                        A dynamic dashboard for the educational institution. PHP is used to route pages, hash and salt techniques are used for secure data storing. 
+                        
+                        <!-- Allows school administrators to register new students and teachers, allows for the publishing of new courses, provides the ability to appoint teachers for each course, and makes it possible to appoint new admin users. For class size, one can set maximum and minimum capacities. It also allows teachers to mark and leave comments to aid students in their learning and progress. Students can see these marks and comments from teachers. Also, students can enroll in a course and check the price and details for each course. -->
                     </p>
-                    <a href="" class="learn-more-orange">LEARN MORE</a>
+                    <!-- <a href="" class="learn-more-orange">LEARN MORE</a> -->
                 </div>
                 <div class="orange-right">
                     <img src="./img/project-php.jpg">
                 </div>
             </div>
-            <div class="project-card-blue">
+            <div class="project-card-blue fadeInRight">
                 <div class="blue-left">
                     <img src="./img/project-bakery.jpg">
                 </div>
                 <div class="blue-right">
-                    <h3 class="project-title">Dynamic Dashboard</h3>
-                    <p class="language">HTML, Sass, Javascript, XXX, XXX, XXX</p>
+                    <h3 class="project-title">Online Shopping System</h3>
+                    <p class="language">HTML, Sass, Angular, Javascript, jQuery</p>
                     <p class="project-detail">
-                        A dynamic dashboard for the educational institution. PHP to routine pages, Hash and salt technique for secured data storing.
+                        <!-- A dynamic dashboard for the educational institution. PHP to routine pages, Hash and salt technique for secured data storing. -->
+
+                        AngularJS’s logic validates each input box by using ng-model access to the element and displays a modal box for each item when the item is clicked. 
+                        
+                        <!-- jQuery is used to make a fade-out animation when items are added to the shopping cart. Customers can choose the number of items and add them to a shopping cart. Furthermore, customers can check the details and total price, edit the number of items, and delete items from the shopping cart. -->
                     </p>
-                    <a href="" class="learn-more-blue">LEARN MORE</a>
+                    <!-- <a href="" class="learn-more-blue">LEARN MORE</a> -->
                 </div>
             </div>
-            <div class="project-card-orange">
+            <div class="project-card-orange fadeInOrange2">
                 <div class="orange-left">
-                    <h3 class="project-title">Dynamic Dashboard</h3>
-                    <p class="language">HTML, Sass, Javascript, XXX, XXX, XXX</p>
+                    <h3 class="project-title">Responsive Website</h3>
+                    <p class="language">HTML, Sass, Bootstrap, Javascript, jQuery</p>
                     <p class="project-detail">
-                        A dynamic dashboard for the educational institution. PHP to routine pages, Hash and salt technique for secured data storing.
+                        <!-- A dynamic dashboard for the educational institution. PHP to routine pages, Hash and salt technique for secured data storing. -->
+
+                        A fully responsive landing page for musicians. It uses Bootstrap and the media query method, as well as Javascript to validate each input box by regular expression. 
+                        
+                        <!-- Also, it displays different contents depending on what button is clicked. The viewer can see information about the musician, watch a music video by a provided link and check the event and concert date. Viewers can contact musicians through the validated contact form. -->
                     </p>
-                    <a href="" class="learn-more-orange">LEARN MORE</a>
+                    <!-- <a href="" class="learn-more-orange">LEARN MORE</a> -->
                 </div>
                 <div class="orange-right">
                     <img src="./img/project-musician.jpg">
@@ -280,15 +299,15 @@
     </div>
     <div class="education-wrapper" id="education">
         <div class="container education-container">
-            <h2 class="section-title">Education<span class="orange-dot">.</span></h2>
+            <h2 class="section-title fadeInLeft">Education<span class="orange-dot">.</span></h2>
             <div class="education-cards">
-                <div class="tamwood">
+                <div class="tamwood fadeInLeft">
                     <a href="https://tamwood.com/" target="_blank"><img src="./img/tamwood.jpg"></a>
                     <h2>Tamwood Career College</h2>
                     <p>Diploma in Web Development</p>
                     <p>Sep 2021 - Mar 2022</p>
                 </div>
-                <div class="ryukoku">
+                <div class="ryukoku fadeInRight">
                     <a href="https://www.ryukoku.ac.jp/english2/" target="_blank"><img src="./img/ryukoku.png"></a>
                     <h2>Ryukoku University</h2>
                     <p>Bachelor's Degree in Economics</p>
@@ -299,8 +318,30 @@
     </div>
     <div class="contact-wrapper" id="contact">
         <div class="container contact-container">
-
+            <div class="contact-left fadeInLeft">
+                <h2 class="section-title">Contact<span class="blue-dot">.</span></h2> 
+                <p>
+                    Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+                    <br>
+                    Feel free to ask me anything!
+                </p>
+                <div class="phone">
+                    <img src="./img/phone-voice.svg">
+                    <a href="tel:+14377722943">437-772-2943</a>
+                </div>
+                <div class="email">
+                    <img src="./img/email.svg">
+                    <a href="mailto:ogata.nok@gmail.com" target="_blank">ogata.nok@gmail.com</a>
+                </div>
+                <a href="https://www.linkedin.com/in/naoki-ogata" target="_blank"><img src="./img/linkedIn.png"></a>
+                <a href="https://github.com/Nnookk" target="_blank" id="gitHub"><img src="./img/logo/github.png"></a>
+                <a href="https://www.instagram.com/codebynaoki/" target="_blank"><img src="./img/instagram.png"></a>
+            </div>
+            <div class="contact-right fadeInRight">
+                <img src="./img/contact-blue.svg">
+            </div>
         </div>
     </div>
+    <script src="./js/index.js"></script>
 </body>
 </html>
