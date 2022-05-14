@@ -113,11 +113,12 @@ html {
     @media screen and (max-width:599px) {
         padding: 50px 10px;
     }
-    // @media screen and (min-width:1500px) {
-    //     p {
-    //         font-size: 1.2rem;
-    //     }
-    // }
+    @media screen and (min-width:1500px) {
+        width: 85%;
+        p {
+            font-size: 1.2rem;
+        }
+    }
 }
 
 nav {
@@ -298,7 +299,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 750px;
+    height: 800px;
     background-image: url('../img/background-top.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -378,6 +379,9 @@ nav {
             display: grid;
             gap: 30px;
             grid-template-columns: repeat(auto-fit,minmax(110px,1fr));
+            @media screen and (min-width:1500px) {
+                grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); 
+            }
             .skill-card {
                 display: flex;
                 flex-direction: column;
@@ -432,6 +436,15 @@ nav {
         .project-detail {
             color: #ffffffbd;
             margin-bottom: 20px;
+            #read-more-detail1 {
+                display: none;
+            }  
+            #read-more-detail2 {
+                display: none;
+            }    
+            #read-more-detail3 {
+                display: none;
+            }      
         }
         .learn-more-orange {
             text-decoration: none;
@@ -443,6 +456,8 @@ nav {
             padding: 7px;
             color: #EE2E00;
             transition: all .3s;
+            z-index: 9999;
+            cursor: pointer;
             &:hover {
                 background-color: #EE2E00;
                 color: #FFE4DE;
@@ -458,6 +473,7 @@ nav {
             padding: 7px;
             color: #162CFF;
             transition: all .3s;
+            cursor: pointer;
             &:hover {
                 background-color: #162CFF;
                 color: #D3D8FF;
