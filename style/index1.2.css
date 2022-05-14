@@ -405,6 +405,12 @@ nav ul li a:hover {
   background-size: cover;
 }
 
+@media screen and (min-width: 1500px) {
+  .page-top {
+    height: 1000px;
+  }
+}
+
 .page-top .top-phrase {
   color: #FFFFFF;
   text-align: center;
@@ -863,4 +869,4 @@ nav ul li a:hover {
 .contact-container .contact-right img {
   width: 90%;
 }
-/*# sourceMappingURL=index1.1.css.map */
+/*# sourceMappingURL=index1.2.css.map */

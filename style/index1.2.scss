@@ -300,6 +300,9 @@ nav {
     justify-content: center;
     align-items: center;
     height: 800px;
+    @media screen and (min-width:1500px) {
+        height: 1000px;
+    }
     background-image: url('../img/background-top.jpg');
     background-repeat: no-repeat;
     background-size: cover;
